@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up your E-Music account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .signup-container h1 {
+            color: #6200ea;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .form-group input:focus {
+            border-color: #6200ea;
+            outline: none;
+        }
+        .signup-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #6200ea;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .signup-btn:hover {
+            background-color: #3700b3;
+        }
+        .login-link {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #333;
+        }
+        .login-link a {
+            color: #6200ea;
+            text-decoration: none;
+        }
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="signup-container">
+        <h1>Sign-Up your E-Music account</h1>
+        <form action="/signup/" method="POST">
+            {% csrf_token %}
+       
+        <div class="form-group">
+            <label for="Username">User Name</label>
+            <input type="text" id="username" name="username" placeholder="Enter your user name" required>
+        </div>
+            <!-- Full Name Field -->
+            <div class="form-group">
+                <label for="">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+            </div>
+            <!-- Email Field -->
+            <div class="form-group">
+                <label for="">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <!-- Password Field -->
+            <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" id="pass1" name="pass1" placeholder="Create a password" required>
+            </div>
+            <!-- Confirm Password Field -->
+            <div class="form-group">
+                <label for="">Confirm Password</label>
+                <input type="password" id="pass2" name="pass2" placeholder="Confirm your password" required>
+            </div>
+            <!-- Sign-up Button -->
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+        <div class="login-link">
+            <p>Already have an account? <a href="/login">Login here</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+{% extends "dashboard.html" %}
+
+{% block title %}Setting {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="settings-section">
+        <h2><center>Profile</center></h2>
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter your Username">
+
+        <label for="email">Email</label>
+        <input type="email" id="Email" placeholder="Enter your email address">
+        <div class="faq-item">
+            <label for="profile-pic">Profile Picture</label>
+            <input type="file" id="profile-pic">
+        </div>
+        
+    </div>
+
+    <div class="account-setting">
+        <h2>Account Settings</h2>
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your Password">
+
+        <label for="languange">Language</label>
+        <select id="language">
+            <option value="en">English</option>
+            <option value="tn">Tamil</option>
+            <option value="ml">Malayalam</option>
+            <option value="hd">Hindi</option>
+            <option value="Tl">Telugu</option>
+        </select>
+    </div>
+
+    <div class="not-set">
+        <h2>Preference</h2>
+        <label for="notification">Email Notfication</label>
+        <select id="notifications">
+            <option value="enabled">Enabled</option>
+            <option value="disabled">Disabled</option>
+        </select>
+
+        <label for="theme">Theme</label>
+        <select id="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+
+    <button>Save Button</button>
+</div>
+
+{% endblock %}

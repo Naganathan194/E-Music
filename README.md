@@ -83,11 +83,11 @@ E-Music is revolutionizing the way users interact with music. It enhances engage
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/e-music-ai.git
+   git clone https://github.com/Naganathan194/E-Music.git
    ```
 2. Navigate to the project folder:
    ```sh
-   cd e-music-ai
+   cd E-Music/E-Music\ Project/E-Music\ Final
    ```
 3. Set up a virtual environment:
    ```sh
